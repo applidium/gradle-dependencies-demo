@@ -20,5 +20,9 @@ android {
 }
 
 dependencies {
-    compile 'org.simpleframework:simple-xml:2.7.1'
+    compile('org.simpleframework:simple-xml:2.7.1'){
+        exclude module: 'stax'
+        exclude module: 'stax-api'
+        exclude module: 'xpp3' // optional
+    }
 }
